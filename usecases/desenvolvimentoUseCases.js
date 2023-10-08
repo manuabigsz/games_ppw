@@ -3,7 +3,7 @@ const Desenvolvimento = require('../entities/desenvolvimento');
 
 const getDesenvolvimentoDB = async () => {
     try { 
-        const { rows } = await pool.query(`SELECT * FROM desenvolvimento ORDER BY nome`);
+        const { rows } = await pool.query(`SELECT * FROM desenvolvimento ORDER BY id`);
         return rows.map((desenvolvimento) => new Desenvolvimento(desenvolvimento.id, desenvolvimento.nome));
     } catch (err) {
         throw "Erro: " + err;

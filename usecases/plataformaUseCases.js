@@ -3,7 +3,7 @@ const Plataforma = require('../entities/plataforma');
 
 const getPlataformaDB = async () => {
     try { 
-        const { rows } = await pool.query(`SELECT * FROM plataforma ORDER BY nome`);
+        const { rows } = await pool.query(`SELECT * FROM plataforma ORDER BY id`);
         return rows.map((plataforma) => new Plataforma(plataforma.id, plataforma.nome));
     } catch (err) {
         throw "Erro: " + err;

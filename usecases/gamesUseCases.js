@@ -12,7 +12,7 @@ const getGamesDB = async () => {
             JOIN plataforma ON games.plataforma_id = plataforma.id
             JOIN categoria ON games.categoria_id = categoria.id
             JOIN desenvolvimento ON games.desenvolvimento_id = desenvolvimento.id
-            ORDER BY games.nome
+            ORDER BY games.id
         `;
         
         const { rows } = await pool.query(query);

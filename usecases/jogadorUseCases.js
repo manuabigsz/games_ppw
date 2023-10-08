@@ -3,7 +3,7 @@ const Jogador = require('../entities/jogador');
 
 const getJogadorDB = async () => {
     try { 
-        const { rows } = await pool.query(`SELECT * FROM jogador ORDER BY nome`);
+        const { rows } = await pool.query(`SELECT * FROM jogador ORDER BY id`);
         return rows.map((jogador) => new Jogador(jogador.id, jogador.nome,jogador.email,jogador.senha,jogador.data_cadastro));
     } catch (err) {
         throw "Erro: " + err;
