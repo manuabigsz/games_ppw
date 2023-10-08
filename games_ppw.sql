@@ -37,10 +37,9 @@ CREATE TABLE jogador (
   id serial not null primary key,
   nome VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
-  senha VARCHAR(255) NOT NULL
- 
+  senha VARCHAR(255) NOT NULL,
+  data_cadastro DATE DEFAULT CURRENT_DATE
 );
-
 
 
 -- Popula a tabela `categoria`
