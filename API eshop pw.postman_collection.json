@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "9c898c23-dc5d-4b66-aa11-3d31f78887e4",
+		"name": "API eshop pw",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29656046"
+	},
+	"item": [
+		{
+			"name": "avaliacoes",
+			"item": [
+				{
+					"name": "get avaliacoes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/avaliacoes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"avaliacoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add avaliacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 3,\r\n    \"autor\": \"manu\",\r\n    \"email\": \"alterado\",\r\n\"texto\": \"teclado bom\",\r\n\"nota\": 4,\r\n\"data\": \"13-08-2023\",\r\n\"produto\":2\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/avaliacoes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"avaliacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uptdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 3,\r\n    \"autor\": \"manuuu\",\r\n    \"email\": \"alteradasao@gmail\",\r\n\"texto\": \"teclado bom\",\r\n\"nota\": 4,\r\n\"data\": \"13-08-2023\",\r\n\"produto\":2\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/avaliacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"avaliacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/avaliacoes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"avaliacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getpor codigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/avaliacoes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"avaliacoes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "produtos",
+			"item": [
+				{
+					"name": "get Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/produto/",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"produto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Produtos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": 6,\r\n  \"nome\": \"Smartphone\",\r\n  \"descricao\": \"Um smartphone avançado com ótima câmera e desempenho.\",\r\n  \"quantidade_estoque\": 100,\r\n  \"ativo\": true,\r\n  \"valor\": 999.99,\r\n  \"data_cadastro\": \"2023-09-16\",\r\n  \"categoria\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/produto/",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"produto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Produtos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 2,\r\n    \"nome\": \"Smartphone Atualizado\",\r\n    \"descricao\": \"Um smartphone avançado com melhor câmera e desempenho.\",\r\n    \"quantidade_estoque\": 150,\r\n    \"ativo\": true,\r\n    \"valor\": 1099.99,\r\n    \"data_cadastro\": \"2023-09-17\",\r\n    \"categoria\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/avaliacoes",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"avaliacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Produtos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/produto/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/produto/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"produto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "get usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/usuario/",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"manuelaossanes.pf@ifsul.edu.br\",\r\n        \"senha\": \"123456\",\r\n        \"tipo\": \"A\",\r\n        \"telefone\": \"(54)9991245\",\r\n        \"nome\": \"Manuela\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/usuario/",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"manuelaossanes.pf@ifsul.edu.br\",\r\n    \"senha\": \"senh\",\r\n    \"tipo\": \"A\",\r\n    \"telefone\": \"(54)9991245\",\r\n    \"nome\": \"Manuela Ossanes\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3002/usuario/",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"usuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/usuario/manuelaossanes.pf@ifsul.edu.br",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"usuario",
+								"manuelaossanes.pf@ifsul.edu.br"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get usuario por email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3002/usuario/manuelaossanes.pf@ifsul.edu.br",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"usuario",
+								"manuelaossanes.pf@ifsul.edu.br"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Categoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"EletroDomesticos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update categoria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": 2,\r\n    \"nome\": \"alterado\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get categoria por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
