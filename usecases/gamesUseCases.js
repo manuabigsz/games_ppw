@@ -61,12 +61,12 @@ const addGamesBD = async (body) => {
 
 const updateGamesDB = async (body) => {
     try {
-        const { id, nome } = body;
+        const { id, nome, descricao } = body;
 
         const results = await pool.query(
-            `UPDATE games SET nome = $2
+            `UPDATE games SET nome = $2, descricao =#3
              WHERE id = $1
-             RETURNING id, nome`,
+             RETURNING id, nome,descricao`,
             [id, nome]
         );
 
