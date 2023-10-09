@@ -32,9 +32,9 @@ const addJogadorBD = async (body) => {
 
 const updateJogadorDB = async(body) =>{
     try{
-        const {id, nome} = body;
-        const results = await pool.query(`UPDATE jogador SET nome =$2
-        WHERE id = $1 returning id, nome`,[id,nome]);
+        const {id, nome,email,senha} = body;
+        const results = await pool.query(`UPDATE jogador SET nome =$2, email=$3,senha=$4
+        WHERE id = $1 returning id, nome,email,senha`,[id,nome,email,senha]);
         if(results.rowCount == 0){
             throw `Nenhum registro encontrado com o código ${id} para
             ser alterado`;
