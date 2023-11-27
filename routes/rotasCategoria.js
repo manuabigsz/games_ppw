@@ -3,13 +3,15 @@ const {getCategoria, addCategoria, updateCategoria, deleteCategoria, getCategori
 
 const rotasCategoria = new Router();
 
+const { verificaJWT } = require('../controllers/segurancaController')
+
 rotasCategoria.route('/categoria')
             .get(getCategoria)
             .post(addCategoria)
-            .put(updateCategoria)
+            .put(verificaJWT, updateCategoria)
 
 rotasCategoria.route('/categoria/:codigo')
                 .delete(deleteCategoria)
-                .get(getCategoriaPorCodigo)
+                .get(verificaJWT, getCategoriaPorCodigo)
 
 module.exports = {rotasCategoria};

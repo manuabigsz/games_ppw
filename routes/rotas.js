@@ -1,5 +1,6 @@
 const { Router } = require('express');
-
+const { login } = require('../controllers/segurancaController');
+	 
 const { rotasDesenvolvimento } = require('./rotasDesenvolvimento'); 
 const { rotasCategoria } = require('./rotasCategoria'); 
 const { rotasGames } = require('./rotasGames'); 
@@ -9,6 +10,9 @@ const { rotasPlataforma } = require('./rotasPlataforma');
 
 const rotas = new Router();
 
+rotas.route("/login")
+   .post(login)           
+	 
 
 rotas.use(rotasDesenvolvimento);
 rotas.use(rotasCategoria);

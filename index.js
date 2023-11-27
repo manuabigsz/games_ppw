@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const rotas = require('./routes/rotas');
+require ('dotenv-safe').config;
 
+const jwt = require('jsonwebtoken');
 const app = express();
 
 app.use(express.json());
