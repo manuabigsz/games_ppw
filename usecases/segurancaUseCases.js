@@ -13,9 +13,9 @@ const autenticaJogadorDB = async (body) => {
             console.log('if');
             throw "Usuário ou senha inválidos";
         }
-        console.log('encontrou o jogador');
         const jogador = results.rows[0];
-        return new Jogador(jogador.email, jogador.data_cadastro, jogador.nome,);
+        
+        return new Jogador(jogador.email, jogador.nome, jogador.data_cadastro);
     } catch (err) {
         throw "Erro ao autenticar o usuário: " + err;
     }    
